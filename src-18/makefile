@@ -36,7 +36,7 @@ MPFR_VERSION=4.2.2
 BOOST_VERSION=1_89_0
 
 # https://github.com/CGAL/cgal/releases
-CGAL_VERSION=6.1.1
+CGAL_VERSION=6.1.2
 
 # https://gitlab.com/sfcgal/SFCGAL/-/releases
 SFCGAL_VERSION=2.2.0
@@ -54,7 +54,7 @@ LIBXSLT_VERSION=1.1.45
 LIBXSLT_VERSION_MAJOR=$(shell echo $(LIBXSLT_VERSION) | sed -E 's/^([0-9]+\.[0-9]+)\..*$$/\1/')
 
 # https://openssl-library.org/source/index.html
-OPENSSL_VERSION=3.5.6
+OPENSSL_VERSION=3.5.7
 
 # https://proj.org/download.html
 # https://github.com/OSGeo/PROJ/releases
@@ -84,7 +84,7 @@ PROTOBUF_VERSION=33.6
 PROTOBUFC_VERSION=1.5.2
 
 # https://libtiff.gitlab.io/libtiff/
-LIBTIFF_VERSION=4.7.1
+LIBTIFF_VERSION=4.7.2
 
 # https://github.com/glennrp/libpng/tags
 LIBPNG_VERSION=1.6.58

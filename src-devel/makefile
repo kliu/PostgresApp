@@ -49,7 +49,7 @@ ZSTD_VERSION=1.5.7
 
 # https://github.com/OSGeo/gdal/releases
 # http://download.osgeo.org/gdal/
-GDAL_VERSION=3.13.0
+GDAL_VERSION=3.13.1
 
 # https://libgeos.org/usage/download/
 GEOS_VERSION=3.14.1
@@ -85,7 +85,7 @@ LIBXSLT_VERSION=1.1.45
 LIBXSLT_VERSION_MAJOR=$(shell echo $(LIBXSLT_VERSION) | sed -E 's/^([0-9]+\.[0-9]+)\..*$$/\1/')
 
 # https://openssl-library.org/source/index.html
-OPENSSL_VERSION=3.5.6
+OPENSSL_VERSION=3.5.7
 
 # https://proj.org/download.html
 # https://github.com/OSGeo/PROJ/releases
@@ -116,7 +116,7 @@ PROTOBUF_VERSION=33.6
 PROTOBUFC_VERSION=1.5.2
 
 # https://libtiff.gitlab.io/libtiff/
-LIBTIFF_VERSION=4.7.1
+LIBTIFF_VERSION=4.7.2
 
 # https://github.com/glennrp/libpng/tags
 LIBPNG_VERSION=1.6.58
