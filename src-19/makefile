@@ -102,7 +102,7 @@ NETCDF_VERSION=4.9.2
 PLDEBUGGER_VERSION=1.10
 
 # https://github.com/pgvector/pgvector/tags
-PGVECTOR_VERSION=0.8.2
+PGVECTOR_VERSION=0.8.5
 
 # https://github.com/pgRouting/pgrouting/releases
 PGROUTING_VERSION=4.0.1
@@ -1125,7 +1125,6 @@ $(PREFIX)/lib/postgresql/vector.dylib: pgvector-${PGVECTOR_VERSION}/Makefile $(P
 
 pgvector-${PGVECTOR_VERSION}/Makefile: pgvector-${PGVECTOR_VERSION}.tar.gz
 	$(TAR) $<
-	patch -b -d "pgvector-${PGVECTOR_VERSION}" -p1 <patches/pgvector-pg19.patch
 	touch $@
 
 pgvector-${PGVECTOR_VERSION}.tar.gz:
