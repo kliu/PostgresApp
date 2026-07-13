@@ -954,7 +954,7 @@ boost: $(PREFIX)/lib/libboost_thread.dylib
 	touch $@
 
 $(PREFIX)/lib/libboost_thread.dylib: boost_$(BOOST_VERSION)/b2
-	cd boost_$(BOOST_VERSION) && ./b2 architecture=arm+x86 address-model=64 toolset=clang install
+	cd boost_$(BOOST_VERSION) && ./b2 architecture=arm+x86 address-model=64 toolset=clang install linkflags="-Wl,-headerpad_max_install_names"
 	# till we find a way to pass flags controlling to use of RPATHs to cmake through the B2 system, we fix RPATHs manually after installing
 	install_name_tool -id $(PREFIX)/lib/libboost_atomic.dylib $(PREFIX)/lib/libboost_atomic.dylib
 	install_name_tool -id $(PREFIX)/lib/libboost_chrono.dylib $(PREFIX)/lib/libboost_chrono.dylib
