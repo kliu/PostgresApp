@@ -4,7 +4,7 @@
 POSTGIS_VERSION=3.7.0alpha1
 POSTGIS_MAJOR_VERSION=3
 
-POSTGRES_VERSION=19beta1
+POSTGRES_VERSION=19beta2
 POSTGRES_MAJOR_VERSION=19
 POSTGRES_DOWNLOAD_URL=https://ftp.postgresql.org/pub/source/v$(POSTGRES_VERSION)
 
@@ -157,7 +157,8 @@ CURL=/usr/bin/curl --location --silent --show-error --remote-name --fail --remov
 TAR=/usr/bin/tar xzf
 
 # limited set of targets for now
-all: postgresql auth_permission_dialog
+# scheduled for unbundling in Postgres.app 3 (pg19): wal2json pljs pldebugger pgrouting (?)
+all: postgresql auth_permission_dialog pgvector postgis
 clean: clean-postgresql clean-auth_permission_dialog clean-lz4 clean-zstd clean-openssl clean-icu clean-libxml2 clean-libxslt clean-libedit clean-libjpeg clean-libgeos clean-libgdal clean-libproj clean-json-c clean-abseil clean-protobuf clean-protobuf-c clean-libtiff clean-libpng clean-openjpeg clean-netcdf clean-gmp clean-mpfr clean-boost clean-cgal clean-sfcgal clean-postgis clean-plv8 clean-wal2json clean-pldebugger clean-pgvector clean-pgrouting clean-pljs
 	rm -Rf "$(PREFIX)"
 	rm -Rf "$(BUILD_PREFIX)"
