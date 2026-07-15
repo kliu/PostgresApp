@@ -557,10 +557,7 @@ proj-${PROJ_VERSION}.tar.gz:
 	$(CURL) "http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz"
 
 check-libproj:
-	# 'test_fork' fails (if build on big sur, only for arm64) disabled for now
-	# proj_create: SQLite error on SELECT versioned_auth_name, auth_name, version, priority FROM versioned_auth_name_mapping: disk I/O error
-	# https://github.com/OSGeo/PROJ/issues/4428
-	ARGS="--exclude-regex test_fork --output-on-failure" make -C proj-$(PROJ_VERSION)/build test
+	ARGS="--output-on-failure" make -C proj-$(PROJ_VERSION)/build test
 
 clean-libproj:
 	rm -Rf proj-${PROJ_VERSION}
