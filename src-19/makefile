@@ -18,10 +18,10 @@ ZSTD_VERSION=1.5.7
 
 # https://github.com/OSGeo/gdal/releases
 # http://download.osgeo.org/gdal/
-GDAL_VERSION=3.13.1
+GDAL_VERSION=3.13.2
 
 # https://libgeos.org/usage/download/
-GEOS_VERSION=3.15.0beta1
+GEOS_VERSION=3.15.0beta2
 
 # http://www.ijg.org
 JPEG_VERSION=10
